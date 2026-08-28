@@ -23,7 +23,30 @@ public class Variables : MonoBehaviour
         bool isHurt = false;
 
         int temp = characterHitPoint + characterStregth;
+        int tempsub = characterStregth - 1;
 
-        Debug.Log(temp.ToString());
+        /*characterHitPoint *= 2;
+        characterHitPoint = characterHitPoint * 2;
+        ++characterHitPoint;
+
+         Debug.Log("valor sem operador " + characterHitPoint);
+         Debug.Log("valor com operador antes " + ++characterHitPoint);*/
+        //Debug.Log("valor com operador antes " + characterHitPoint++);
+        //Debug.Log("valor sem alterar nada " + characterHitPoint);
+
+        //bool eh_igual = characterHitPoint < characterStregth;
+
+        //Para passar de ano, a media deve ser igual ou superior a 5
+        //Para passar de ano a presença tem que ser maior que 75
+
+        string catastrofeName = "Camila ";
+
+        int catastrofeNota = 8;
+
+        float catastrofePresenca = 80;
+
+        bool passou_de_ano = catastrofeNota >= 5 && catastrofePresenca >= 75;
+
+        Debug.Log(catastrofeName + "passou_de_ano? " + passou_de_ano);
     }
 }
