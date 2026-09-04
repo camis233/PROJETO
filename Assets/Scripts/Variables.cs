@@ -48,5 +48,24 @@ public class Variables : MonoBehaviour
         bool passou_de_ano = catastrofeNota >= 5 && catastrofePresenca >= 75;
 
         Debug.Log(catastrofeName + "passou_de_ano? " + passou_de_ano);
+
+        string inventorySlot1 = "Espada";
+        string inventorySlot2 = "Escudo";
+        string inventorySlot3 = "Armadura";
+        string inventorySlot4 = "Tocha";
+        string inventorySlot5 = "Botas";
+        string inventorySlot6 = "Poção de Cura";
+        string inventorySlot7 = "Poção de Cura";
+        string inventorySlot8 = "Luvas";
+
+        inventorySlot1 = "Espada";
+        inventorySlot2 = "Escudo";
+
+
+        string[] inventorySlot = new string[10];
+        inventorySlot[0] = "Fim do mundo";
+
+        int size = inventorySlot.Length;
+
     }
 }
