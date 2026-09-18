@@ -130,7 +130,7 @@ public class Variables : MonoBehaviour
 
             if (currentitem == Itens.Espada)
             {
-                Debug.Log("Prosnagem usa Espada");
+                Debug.Log("Perosnagem usa Espada");
             }
             else if (currentitem == Itens.Escudo)
             {
