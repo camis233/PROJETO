@@ -1,5 +1,6 @@
 using NUnit.Framework.Internal;
 using System.Security.Cryptography;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
@@ -55,6 +56,17 @@ public class Variables : MonoBehaviour
 
         Debug.Log(catastrofeName + "passou_de_ano? " + passou_de_ano);
 
+        InventoryItem ironSword = new InventoryItem();
+        ironSword.name = "Espada";
+        ironSword.price = 250.0f;
+        ironSword.weight = 1.25f;
+        ironSword.amount = 1;
+        ironSword.image = null;
+        ironSword.itemType = itemType.Weapon;
+
+        InventoryItem[] inventory = new InventoryItem[10];
+        inventory[0] = ironSword;
+
         string inventorySlot1 = "Espada";
         string inventorySlot2 = "Escudo";
         string inventorySlot3 = "Armadura";
@@ -103,12 +115,12 @@ public class Variables : MonoBehaviour
         bool isJumpSuccess = true;
         bool hasShield = false;
 
-        if(isJumpSuccess ==true) // Se o meu pulo for bem sucedido
+        if (isJumpSuccess == true) // Se o meu pulo for bem sucedido
 
         {
             rings += 3; // Eu ganho 3 moedas
         }
-        else if(isJumpSuccess == false && hasShield == false) //porém, se meu pulo for mal sucedido
+        else if (isJumpSuccess == false && hasShield == false) //porém, se meu pulo for mal sucedido
         {
             rings = 0; // Eu perco todas as moedas
         }
@@ -120,13 +132,13 @@ public class Variables : MonoBehaviour
         {
             Debug.Log("Não estou pulando");
 
-           
+
 
 
             //Aula, dia 18/09/2026
 
-    Itens currentitem = Itens.Espada;
-    int index = (int)currentitem;
+            Itens currentitem = Itens.Espada;
+            int index = (int)currentitem;
 
             if (currentitem == Itens.Espada)
             {
@@ -176,22 +188,35 @@ public class Variables : MonoBehaviour
             Random.Range(0, inventario.Length);
 
 
-            for (int i = 0;i < inventario.Length; i++) 
+            for (int i = 0; i < inventario.Length; i++)
             {
-              if (inventario[i]== "Armadura de Prata")
+                if (inventario[i] == "Armadura de Prata")
                 {
                     Debug.Log("Este inventario possui um arma mítica!!!!");
                     break;
                 }
                 //Debug.Log(inventario[i]);
             }
-           
-
-
-
-
-
         }
-
     }
+
+    public enum itemType { Weapon, Armor, Consumable };
+    public struct InventoryItem
+    {
+        public string name;
+        public float price;
+        public float weight;
+        public int amount;
+        public Sprite image;
+        public itemType itemType;
+
+        
+    }
+
+
+
+
 }
+
+    
+

@@ -24,8 +24,8 @@ public class Atividade : MonoBehaviour
             if else (INVENTARIO[i] == "")
         }*/
 
-    //Correção do professor
-    void Start()
+        //Correção do professor
+        void Start()
         {
             string[] inventory = { "Espada Longa de Aço", "Escudo de Carvalho", "Poção de Cura Maior", "Elixir de Mana", "Pergaminho de Bola de Fogo", "Rações de Viagem", "Tocha", "Corda de Cânhamo (10m)", "Gazuas de Ladrão", "Anel de Prata Antigo", "Mapa do Reino", "Saco de Moedas de Ouro", "Adaga Envenenada", "Amuleto de Proteção", "Pena de Fênix", "Cajado de Fogo" };
 
@@ -33,7 +33,7 @@ public class Atividade : MonoBehaviour
             int randomindex = Random.Range(0, inventory.Length);
             string trapChange = (Random.Range(0, 2) % 2) == 0 ? "Espada Quebrada" : "Escudo Quebrado";
 
-            for (int i = 0; int < inventory.Length; i++)
+            for (int i = 0; i < inventory.Length; i++)
             {
                 if (inventory[i] == "Espada Quebrada")
                 {
@@ -46,10 +46,8 @@ public class Atividade : MonoBehaviour
                     break;
                 }
             }
+        }
 
 
-// Update is called once per frame
-void Update()
-    {
-       
+    }
 }
